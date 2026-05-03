@@ -5,6 +5,7 @@ function Header() {
             <h1 className="header-titre">SenTransport</h1>
             <p className="header-soustitre">
                 Votre guide du transport en commun a Dakar
+                on est le {new Date().toLocaleDateString('fr-FR')}
             </p>
         </header>
     );
