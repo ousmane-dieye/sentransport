@@ -1,17 +1,114 @@
 import './App.css';
 import Header from './Header';
 import ListeLignes from './ListeLignes';
+import StatReseau from './StatReseau';
 import Footer from './Footer';
+import Test from './Test';
+import Recherche from './Recherche';
 
 function App() {
   const lignes = [
-    { id: 1, numero: "1", depart: "Parcelles Assainies", arrivee: "Plateau", arrets: 14 },
-    { id: 2, numero: "7", depart: "Guédiawaye", arrivee: "Place Obélisque", arrets: 18 },
-    { id: 3, numero: "15", depart: "Pikine", arrivee: "Médina", arrets: 12 },
-    { id: 4, numero: "23", depart: "Ouakam", arrivee: "Grand Dakar", arrets: 10 },
-    { id: 5, numero: "8", depart: "Almadies", arrivee: "Colobane", arrets: 16 },
-    { id: 6, numero: "12", depart: "Yoff", arrivee: "Sandaga", arrets: 11 },
-  ];
+  {
+    id: 1,
+    numero: "1",
+    depart: "Parcelles Assainies",
+    arrivee: "Plateau",
+    arrets: 14,
+    listeArrets: [
+      "Parcelles U14",
+      "Parcelles U10",
+      "Camberene",
+      "Patte d'Oie",
+      "Grand Dakar",
+      "Colobane",
+      "Ponty",
+      "Plateau",
+    ],
+  },
+
+  {
+    id: 2,
+    numero: "7",
+    depart: "Guediawaye",
+    arrivee: "Place Obe",
+    arrets: 18,
+    listeArrets: [
+      "Guediawaye",
+      "Pikine",
+      "Thiaroye",
+      "Keur Massar",
+      "Grand Yoff",
+      "Parcelles",
+      "Liberte 6",
+      "Place Obe",
+    ],
+  },
+
+  {
+    id: 3,
+    numero: "15",
+    depart: "Pikine",
+    arrivee: "Medina",
+    arrets: 12,
+    listeArrets: [
+      "Pikine Centre",
+      "Thiaroye Gare",
+      "Hann",
+      "Colobane",
+      "Fass",
+      "Medina",
+    ],
+  },
+
+  {
+    id: 4,
+    numero: "23",
+    depart: "Ouakam",
+    arrivee: "Grand Dakar",
+    arrets: 10,
+    listeArrets: [
+      "Ouakam Village",
+      "Mermoz",
+      "Fann",
+      "Point E",
+      "Liberte 5",
+      "Grand Dakar",
+    ],
+  },
+
+  {
+    id: 5,
+    numero: "8",
+    depart: "Almadies",
+    arrivee: "Colobane",
+    arrets: 16,
+    listeArrets: [
+      "Almadies",
+      "Ngor",
+      "Yoff",
+      "Ouest Foire",
+      "Liberte 6",
+      "Colobane",
+    ],
+  },
+
+  {
+    id: 6,
+    numero: "12",
+    depart: "Yoff",
+    arrivee: "Sandaga",
+    arrets: 11,
+    listeArrets: [
+      "Yoff Village",
+      "Aeroport LSS",
+      "Parcelles U17",
+      "Grand Yoff",
+      "HLM",
+      "Sandaga",
+    ],
+  },
+];
+    const [recherche, setRecherche] = useState()
 
   return (
     <div className="App">
@@ -21,7 +118,8 @@ function App() {
         <ListeLignes lignes={lignes} />
       </main>
 
-      <Footer />
+      <Footer /> 
+      {/* <Test /> */}
     </div>
   );
 }
